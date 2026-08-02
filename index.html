@@ -1,50 +1,36 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Grave</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Grave</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div id="background" aria-hidden="true"></div>
 
-<div id="background"></div>
+  <main id="page">
+    <p id="quote">
+      "Il tempo può cambiare il destino,<br>
+      ma non può cancellare il passato."
+    </p>
 
-<div id="container">
+    <section id="hero" aria-label="Copertina The Grave">
+      <img id="frame" src="images/frame.png" alt="">
+      <img id="ruby" src="images/ruby.png" alt="Rubino">
+      <a id="enter" href="#">
+        <img src="images/button.png" alt="Entra nel Romanzo">
+      </a>
+    </section>
 
-<p id="quote">
-Il tempo può cambiare il destino,<br>
-ma non può cancellare il passato.
-</p>
+    <nav id="menu" aria-label="Sezioni">
+      <a href="#">Personaggi</a>
+      <a href="#">Capitoli</a>
+      <a href="#">La Storia</a>
+      <a href="#">Whitechapel</a>
+    </nav>
+  </main>
 
-<img id="frame" src="images/frame.png" alt="Cornice">
-
-<img id="ruby" src="images/ruby.png" alt="Rubino">
-
-<a id="enter" href="#">
-<img src="images/button.png" alt="Entra nel Romanzo">
-</a>
-
-<nav>
-
-<a href="#">Personaggi</a>
-
-<a href="#">Capitoli</a>
-
-<a href="#">La Storia</a>
-
-<a href="#">Whitechapel</a>
-
-</nav>
-
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
