@@ -5,118 +5,111 @@
 }
 
 body{
-    overflow:hidden;
-    font-family:Georgia,serif;
     background:#000;
-    color:#f2e3bf;
+    overflow-x:hidden;
+    font-family:Georgia, serif;
 }
 
 #background{
     position:fixed;
     inset:0;
-    background:url("images/background.png") center center no-repeat;
-    background-size:cover;
+    background:url("images/background.png") center center/cover no-repeat;
     z-index:-2;
 }
 
-#background::after{
+#frame{
+    width:100%;
+    max-width:900px;
+    margin:120px auto 0;
+    position:relative;
+    text-align:center;
+}
+
+#frame::before{
     content:"";
     position:absolute;
     inset:0;
-    background:rgba(0,0,0,.45);
-}
-
-#frame{
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    width:min(92vw,700px);
-    height:min(92vh,1000px);
-}
-
-#logo{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:contain;
+    background:url("images/frame.png") center top/contain no-repeat;
+    z-index:1;
     pointer-events:none;
 }
 
 #quote{
-    #quote{
-    top: 90px;
-    font-size: 44px;
-    line-height: 1.4;
-}
+    color:#ead9b8;
+    font-size:44px;
+    line-height:1.4;
+    text-align:center;
+    padding:40px 40px 0;
+    text-shadow:0 2px 6px #000;
+    position:relative;
+    z-index:2;
 }
 
 #ruby{
-    position:absolute;
     width:220px;
-    left:50%;
-    top:42%;
-    transform:translate(-50%,-50%);
-    filter:drop-shadow(0 0 40px crimson);
-    animation:pulse 3s infinite;
-}
-
-#enter{
-    position:absolute;
-    left:50%;
-    top:69%;
-    transform:translateX(-50%);
+    display:block;
+    margin:60px auto;
+    position:relative;
+    z-index:2;
+    filter:drop-shadow(0 0 25px rgba(180,0,0,.45));
 }
 
 #enter img{
-    width:320px;
-    transition:.3s;
-}
-
-#enter img:hover{
-    transform:scale(1.08);
-    filter:drop-shadow(0 0 18px red);
+    width:360px;
+    display:block;
+    margin:20px auto 80px;
+    position:relative;
+    z-index:2;
 }
 
 nav{
-    position:absolute;
-    bottom:6%;
-    left:50%;
-    transform:translateX(-50%);
-    width:90%;
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
+    align-items:center;
+    max-width:900px;
+    margin:0 auto 80px;
+    position:relative;
+    z-index:2;
 }
 
 nav a{
-    color:#d8b46c;
+    color:#d5b46d;
     text-decoration:none;
-    font-size:1.2rem;
+    font-size:22px;
     letter-spacing:2px;
     transition:.3s;
 }
 
 nav a:hover{
     color:#fff;
-    text-shadow:0 0 10px gold;
+    text-shadow:0 0 10px #b88a28;
 }
 
-@keyframes pulse{
+@media(max-width:768px){
 
-0%{
-transform:translate(-50%,-50%) scale(1);
-filter:drop-shadow(0 0 20px crimson);
-}
+    #quote{
+        font-size:28px;
+        padding:30px 20px 0;
+    }
 
-50%{
-transform:translate(-50%,-50%) scale(1.05);
-filter:drop-shadow(0 0 45px red);
-}
+    #ruby{
+        width:170px;
+        margin:45px auto;
+    }
 
-100%{
-transform:translate(-50%,-50%) scale(1);
-filter:drop-shadow(0 0 20px crimson);
-}
+    #enter img{
+        width:260px;
+    }
+
+    nav{
+        flex-wrap:wrap;
+        gap:20px;
+        padding:0 15px;
+        margin-bottom:50px;
+    }
+
+    nav a{
+        font-size:18px;
+    }
 
 }
