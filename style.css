@@ -1,44 +1,137 @@
-body {
-  margin: 0;
-  padding: 0;
-  background: #efe3c4;
-  font-family: Georgia, serif;
-  color: #3a2b1f;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-main {
-  max-width: 700px;
-  margin: 40px auto;
-  padding: 30px;
-  background: #f8f2df;
-  border: 6px solid #8b6b3f;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+body{
+
+    background:#e9dcc2;
+
+    font-family:Georgia, serif;
+
+    color:#3b2b1d;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:100vh;
+
 }
 
-h1 {
-  text-align: center;
-  font-size: 48px;
-  letter-spacing: 4px;
+main{
+
+    width:90%;
+
+    max-width:420px;
+
+    background:#f6eedc;
+
+    border:8px solid #7d5b33;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    box-shadow:0 0 30px rgba(0,0,0,.30);
+
 }
 
-p {
-  text-align: center;
-  font-size: 20px;
-  line-height: 1.6;
+h1{
+
+    text-align:center;
+
+    font-size:42px;
+
+    letter-spacing:5px;
+
+    margin-bottom:15px;
+
 }
 
-button {
-  display: block;
-  margin: 30px auto;
-  padding: 16px 28px;
-  font-size: 20px;
-  background: #7b5a33;
-  color: white;
-  border: none;
-  border-radius: 8px;
+.subtitle{
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    margin-bottom:25px;
+
 }
 
-button:hover {
-  background: #5d4223;
+.ruby{
+
+    text-align:center;
+
+    font-size:52px;
+
+    margin-bottom:25px;
+
+    animation:pulse 2s infinite;
+
+}
+
+button{
+
+    width:100%;
+
+    padding:18px;
+
+    background:#7d5b33;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    margin-bottom:30px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#3b2b1d;
+
+    font-size:20px;
+
+    padding:14px;
+
+    border:2px solid #7d5b33;
+
+    border-radius:10px;
+
+    text-align:center;
+
+}
+
+@keyframes pulse{
+
+0%{transform:scale(1);}
+
+50%{transform:scale(1.15);}
+
+100%{transform:scale(1);}
+
 }
