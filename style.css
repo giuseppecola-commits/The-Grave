@@ -104,3 +104,78 @@ nav a{
     text-decoration:none;
     font-size:20px;
 }
+
+/* Effetto vetro nero */
+
+#content{
+
+    background:rgba(0,0,0,.35);
+
+    backdrop-filter:blur(4px);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 0 60px rgba(0,0,0,.65);
+
+}
+
+
+/* Bagliore del titolo */
+
+h1{
+
+    text-shadow:
+    0 0 15px rgba(255,255,255,.15),
+    0 0 30px rgba(120,0,0,.45),
+    0 0 70px rgba(120,0,0,.35);
+
+}
+
+
+/* Pulsante */
+
+#enter{
+
+    transition:.35s;
+
+    box-shadow:0 0 25px rgba(160,20,20,.4);
+
+}
+
+#enter:hover{
+
+    transform:scale(1.04);
+
+    box-shadow:0 0 45px crimson;
+
+}
+
+
+/* Menu */
+
+nav a{
+
+    transition:.35s;
+
+}
+
+nav a:hover{
+
+    color:#ff5454;
+
+}
+
+
+/* Rubino */
+
+#ruby img{
+
+    filter:
+
+    drop-shadow(0 0 25px crimson)
+
+    drop-shadow(0 0 60px red);
+
+}
