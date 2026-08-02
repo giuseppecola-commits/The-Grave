@@ -4,158 +4,249 @@
     box-sizing:border-box;
 }
 
-body{
-    background:#0b0909;
-    color:#f2e2c0;
-    font-family:Georgia,serif;
-    overflow-x:hidden;
+html,body{
+    width:100%;
+    height:100%;
 }
+
+body{
+
+    overflow:hidden;
+
+    background:#090909;
+
+    color:#f1e6c8;
+
+    font-family:Georgia, serif;
+
+}
+
+/* BACKGROUND */
 
 #background{
+
     position:fixed;
+
     inset:0;
-    background:url("images/background.webp") center center/cover no-repeat;
-    z-index:-30;
+
+    background:url("images/background.webp");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    z-index:1;
+
 }
 
-#fog{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.25);
-    z-index:-20;
-}
+/* CORNICE */
 
 #frame{
+
     position:fixed;
+
     inset:0;
-    border:14px solid #6d5326;
+
+    background:url("images/frame.png");
+
+    background-size:100% 100%;
+
+    background-repeat:no-repeat;
+
+    z-index:5;
+
     pointer-events:none;
-    z-index:1000;
+
 }
 
-#content{
-    width:min(900px,92%);
-    margin:auto;
-    text-align:center;
-    padding:30px 0 60px;
+/* CONTENUTO */
+
+#logo,
+#quote,
+#ruby,
+#enter,
+nav,
+#music,
+#menu{
+
+    position:relative;
+
+    z-index:20;
+
 }
 
-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:40px;
-}
+/* TITOLO */
 
-header button{
-    width:58px;
-    height:58px;
-    border-radius:50%;
-    border:2px solid #98733c;
-    background:#15110d;
-    color:#e8d6a7;
-    font-size:22px;
-}
+#title{
 
-#logo{
-    font-size:36px;
-    color:#d2b26a;
-}
-
-h1{
-    font-size:82px;
-    letter-spacing:6px;
-    margin-top:20px;
-}
-
-p{
-    margin-top:20px;
-    font-size:26px;
-    line-height:1.6;
-    color:#ead9b8;
-}
-
-#ruby img{
-    width:320px;
-    margin:60px auto;
     display:block;
+
+    width:520px;
+
+    max-width:90%;
+
+    margin:40px auto 20px;
+
 }
 
-#enter{
-    background:#4a0f12;
-    color:#f3dfb6;
+/* CITAZIONE */
+
+#quote{
+
+    text-align:center;
+
+    font-size:26px;
+
+    line-height:1.7;
+
+    color:#ead9b8;
+
+    text-shadow:0 0 12px rgba(0,0,0,.8);
+
+}
+
+/* RUBINO */
+
+#ruby{
+
+    display:block;
+
+    width:240px;
+
+    margin:45px auto;
+
+    filter:
+        drop-shadow(0 0 20px crimson)
+        drop-shadow(0 0 50px red);
+
+    animation:rubyPulse 3s ease-in-out infinite;
+
+}
+
+@keyframes rubyPulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.04);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* BARRA SUPERIORE */
+
+#music,
+#menu{
+
+    position:absolute;
+
+    top:35px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
     border:2px solid #b68a45;
-    padding:20px 50px;
-    border-radius:12px;
-    font-size:28px;
+
+    background:rgba(20,20,20,.65);
+
+    color:#f2dfb3;
+
+    font-size:24px;
+
     cursor:pointer;
-}
 
-nav{
-    margin-top:70px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:30px;
-}
-
-nav a{
-    color:#d7b56d;
-    text-decoration:none;
-    font-size:20px;
-}
-
-/* Effetto vetro nero */
-
-#content{
-
-    background:rgba(0,0,0,.35);
-
-    backdrop-filter:blur(4px);
-
-    border-radius:25px;
-
-    padding:40px;
-
-    box-shadow:0 0 60px rgba(0,0,0,.65);
+    z-index:30;
 
 }
 
+#music{
 
-/* Bagliore del titolo */
-
-h1{
-
-    text-shadow:
-    0 0 15px rgba(255,255,255,.15),
-    0 0 30px rgba(120,0,0,.45),
-    0 0 70px rgba(120,0,0,.35);
+    left:35px;
 
 }
 
+#menu{
 
-/* Pulsante */
+    right:35px;
+
+}
+
+/* PULSANTE */
 
 #enter{
+
+    display:block;
+
+    width:420px;
+
+    max-width:80%;
+
+    margin:20px auto;
+
+}
+
+#enter img{
+
+    width:100%;
+
+    display:block;
 
     transition:.35s;
 
-    box-shadow:0 0 25px rgba(160,20,20,.4);
+}
+
+#enter:hover img{
+
+    transform:scale(1.03);
 
 }
 
-#enter:hover{
+/* MENU */
 
-    transform:scale(1.04);
+nav{
 
-    box-shadow:0 0 45px crimson;
+    width:100%;
+
+    position:absolute;
+
+    bottom:35px;
+
+    left:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:35px;
 
 }
-
-
-/* Menu */
 
 nav a{
+
+    color:#d6b16a;
+
+    text-decoration:none;
+
+    letter-spacing:2px;
+
+    font-size:18px;
 
     transition:.35s;
 
@@ -163,19 +254,6 @@ nav a{
 
 nav a:hover{
 
-    color:#ff5454;
-
-}
-
-
-/* Rubino */
-
-#ruby img{
-
-    filter:
-
-    drop-shadow(0 0 25px crimson)
-
-    drop-shadow(0 0 60px red);
+    color:#ff5555;
 
 }
