@@ -28,7 +28,7 @@ body{
 
 #quote{
     position:absolute;
-    top:25px;
+    top:70px;
     left:50%;
     transform:translateX(-50%);
     width:90%;
