@@ -41,12 +41,11 @@ body{
 }
 
 #frame{
-    position:absolute;
-    top:120px;
-    left:50%;
-    transform:translateX(-50%);
-    width:95%;
-    z-index:2;
+    position:relative;
+    width:100%;
+    max-width:430px;
+    margin:70px auto 0;
+    height:900px;
 }
 
 #frame img{
@@ -56,17 +55,17 @@ body{
 
 #ruby{
     position:absolute;
-    top:270px;
+    top:250px;
     left:50%;
     transform:translateX(-50%);
-    width:58%;
+    width:210px;
     filter:drop-shadow(0 0 35px rgba(180,0,0,.8));
     z-index:3;
 }
 
 #enter{
     position:absolute;
-    bottom:140px;
+    top:650px;
     left:50%;
     transform:translateX(-50%);
     z-index:4;
@@ -78,11 +77,12 @@ body{
 
 nav{
     position:absolute;
-    bottom:35px;
+    top:820px;
     width:100%;
     display:flex;
     justify-content:space-evenly;
-    z-index:5;
+    align-items:center;
+    z-index:4;
 }
 
 nav a{
