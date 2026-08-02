@@ -6,106 +6,119 @@
 
 body{
     background:#000;
+    font-family:Georgia,serif;
     overflow-x:hidden;
-    font-family:Georgia, serif;
+    color:#e8d7b0;
 }
 
 #background{
     position:fixed;
-    inset:0;
-    background:url("images/background.png") center center/cover no-repeat;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url("images/background.png") center center / cover no-repeat;
     z-index:-2;
 }
 
-#frame{
+#container{
     width:100%;
     max-width:900px;
-    margin:120px auto 0;
-    position:relative;
+    margin:0 auto;
     text-align:center;
-}
-
-#frame::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:url("images/frame.png") center top/contain no-repeat;
-    z-index:1;
-    pointer-events:none;
+    position:relative;
+    padding-top:40px;
 }
 
 #quote{
-    color:#ead9b8;
-    font-size:44px;
+    font-size:42px;
     line-height:1.4;
-    text-align:center;
-    padding:40px 40px 0;
-    text-shadow:0 2px 6px #000;
+    text-shadow:0 0 12px #000;
+    margin-bottom:30px;
     position:relative;
-    z-index:2;
+    z-index:5;
+}
+
+#frame{
+    width:95%;
+    max-width:820px;
+    display:block;
+    margin:0 auto;
+    position:relative;
+    z-index:1;
 }
 
 #ruby{
-    width:220px;
-    display:block;
-    margin:60px auto;
-    position:relative;
-    z-index:2;
-    filter:drop-shadow(0 0 25px rgba(180,0,0,.45));
+    position:absolute;
+    top:290px;
+    left:50%;
+    transform:translateX(-50%);
+    width:210px;
+    filter:drop-shadow(0 0 35px rgba(180,0,0,.75));
+    z-index:3;
+}
+
+#enter{
+    position:absolute;
+    top:760px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:4;
 }
 
 #enter img{
-    width:360px;
-    display:block;
-    margin:20px auto 80px;
-    position:relative;
-    z-index:2;
+    width:320px;
 }
 
 nav{
+    position:absolute;
+    top:940px;
+    width:100%;
     display:flex;
     justify-content:space-around;
-    align-items:center;
-    max-width:900px;
-    margin:0 auto 80px;
-    position:relative;
-    z-index:2;
+    z-index:4;
 }
 
 nav a{
-    color:#d5b46d;
+    color:#d7bb74;
     text-decoration:none;
-    font-size:22px;
+    font-size:24px;
     letter-spacing:2px;
-    transition:.3s;
 }
 
 nav a:hover{
-    color:#fff;
-    text-shadow:0 0 10px #b88a28;
+    color:white;
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     #quote{
         font-size:28px;
-        padding:30px 20px 0;
+        padding:0 20px;
+    }
+
+    #frame{
+        width:100%;
     }
 
     #ruby{
         width:170px;
-        margin:45px auto;
+        top:250px;
+    }
+
+    #enter{
+        top:640px;
     }
 
     #enter img{
-        width:260px;
+        width:250px;
     }
 
     nav{
+        top:800px;
         flex-wrap:wrap;
-        gap:20px;
+        gap:15px;
         padding:0 15px;
-        margin-bottom:50px;
     }
 
     nav a{
