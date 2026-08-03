@@ -9,15 +9,119 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;height:100%}
 body{background:#050403;overflow:hidden;font-family:Georgia,serif;color:#f2ddb0}
-#stage{position:fixed;inset:0;overflow:hidden;background:#050403}
-#art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;display:block}
-#overlay{position:absolute;inset:0}
-.hotspot{position:absolute;display:block;background:transparent;border:0;outline:none;cursor:pointer;text-decoration:none}
+
+#loginScreen{
+position:fixed;
+inset:0;
+background:
+linear-gradient(to bottom, rgba(0,0,0,.42), rgba(0,0,0,.62)),
+url("images/homepage-master.png") center center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:99999;
+padding:20px;
+}
+
+.loginBox{
+width:min(92vw,440px);
+background:rgba(15,10,7,.92);
+border:1px solid rgba(255,221,160,.22);
+border-radius:18px;
+box-shadow:0 0 40px rgba(0,0,0,.58);
+backdrop-filter:blur(8px);
+padding:34px 22px 26px;
+text-align:center;
+}
+
+.loginBox h1{
+font-size:clamp(2.1rem,7vw,3.8rem);
+letter-spacing:.08em;
+color:#f2ddb0;
+line-height:1;
+margin-bottom:10px;
+}
+
+.loginBox .tagline{
+color:#d8bc87;
+font-size:1rem;
+line-height:1.55;
+margin-bottom:20px;
+}
+
+.loginBox input{
+width:100%;
+padding:14px 16px;
+border:none;
+border-radius:12px;
+font-size:18px;
+text-align:center;
+outline:none;
+margin-bottom:16px;
+background:#f7f0e2;
+color:#24150f;
+}
+
+.loginBox button{
+width:100%;
+padding:14px 16px;
+border:none;
+border-radius:12px;
+background:#7f1416;
+color:#fff;
+font-size:18px;
+letter-spacing:.08em;
+cursor:pointer;
+transition:.2s ease;
+}
+
+.loginBox button:hover{
+background:#a81c20;
+transform:translateY(-1px);
+}
+
+#error{
+margin-top:14px;
+min-height:1.4em;
+color:#ff9a9a;
+font-size:1rem;
+}
+
+#stage{
+position:fixed;
+inset:0;
+overflow:hidden;
+background:#050403;
+}
+
+#art{
+position:absolute;
+inset:0;
+width:100%;
+height:100%;
+object-fit:contain;
+object-position:center center;
+display:block;
+}
+
+#overlay{
+position:absolute;
+inset:0;
+}
+
+.hotspot{
+position:absolute;
+display:block;
+background:transparent;
+border:0;
+outline:none;
+cursor:pointer;
+text-decoration:none;
+}
 
 #music{left:5.5%;top:7.2%;width:12%;height:9.2%}
 #menuBtn{left:82%;top:7.1%;width:12.5%;height:9.4%}
 
-/* PULSANTE INIZIA A LEGGERE */
 #enter{
 left:30.5%;
 top:65.8%;
@@ -93,75 +197,80 @@ width:min(86vw,300px);
 }
 }
 </style>
-
 </head>
 
 <body>
 
-<div id="stage">
-
-<img id="art" src="images/homepage-master.png" alt="The Grave">
-
-<div id="overlay">
-
-<button class="hotspot" id="music" aria-label="Musica"></button>
-
-<button class="hotspot" id="menuBtn" aria-label="Menu"></button>
-
-<a class="hotspot" id="enter" href="capitolo1.html" aria-label="Entra nel Romanzo"></a>
-
-<a class="hotspot" id="personaggi" href="book.html" aria-label="Personaggi"></a>
-
-<a class="hotspot" id="capitoli" href="capitoli.html" aria-label="Capitoli"></a>
-
-<a class="hotspot" id="storia" href="storia.html" aria-label="La Storia"></a>
-
-<a class="hotspot" id="whitechapel" href="whitechapel.html" aria-label="Whitechapel 1888"></a>
-
-<a class="hotspot" id="diario" href="diario.html" aria-label="Diario"></a>
-
-<a class="hotspot" id="rubinoLink" href="rubino.html" aria-label="Il Rubino"></a>
-
-<aside id="drawer" aria-label="Menu">
-
-<div class="drawer-title">THE GRAVE</div>
-
-<div class="music-state" id="musicState">Musica OFF</div>
-
-<a class="drawer-link" href="capitolo1.html">📖 Inizia a leggere</a>
-
-<a class="drawer-link" href="capitoli.html">Capitoli</a>
-
-<a class="drawer-link" href="storia.html">La Storia</a>
-
-<a class="drawer-link" href="whitechapel.html">Whitechapel 1888</a>
-
-<a class="drawer-link" href="diario.html">Diario</a>
-
-<a class="drawer-link" href="rubino.html">Il Rubino</a>
-
-</aside>
-
+<div id="loginScreen">
+  <div class="loginBox">
+    <h1>THE GRAVE</h1>
+    <div class="tagline">Il tempo può cambiare il destino,<br>ma non può cancellare il passato.</div>
+    <input type="password" id="password" placeholder="Inserisci la chiave">
+    <button type="button" onclick="checkPassword()">ENTRA</button>
+    <div id="error"></div>
+  </div>
 </div>
 
+<div id="stage">
+  <img id="art" src="images/homepage-master.png" alt="The Grave">
+
+  <div id="overlay">
+    <button class="hotspot" id="music" aria-label="Musica"></button>
+    <button class="hotspot" id="menuBtn" aria-label="Menu"></button>
+    <a class="hotspot" id="enter" href="capitolo1.html" aria-label="Entra nel Romanzo"></a>
+
+    <a class="hotspot" id="personaggi" href="book.html" aria-label="Personaggi"></a>
+    <a class="hotspot" id="capitoli" href="capitoli.html" aria-label="Capitoli"></a>
+    <a class="hotspot" id="storia" href="storia.html" aria-label="La Storia"></a>
+    <a class="hotspot" id="whitechapel" href="whitechapel.html" aria-label="Whitechapel 1888"></a>
+    <a class="hotspot" id="diario" href="diario.html" aria-label="Diario"></a>
+    <a class="hotspot" id="rubinoLink" href="rubino.html" aria-label="Il Rubino"></a>
+
+    <aside id="drawer" aria-label="Menu">
+      <div class="drawer-title">THE GRAVE</div>
+      <div class="music-state" id="musicState">Musica OFF</div>
+      <a class="drawer-link" href="capitolo1.html">📖 Inizia a leggere</a>
+      <a class="drawer-link" href="book.html">Personaggi</a>
+      <a class="drawer-link" href="capitoli.html">Capitoli</a>
+      <a class="drawer-link" href="storia.html">La Storia</a>
+      <a class="drawer-link" href="whitechapel.html">Whitechapel 1888</a>
+      <a class="drawer-link" href="diario.html">Diario</a>
+      <a class="drawer-link" href="rubino.html">Il Rubino</a>
+    </aside>
+    
+      </div>
 </div>
 
 <script>
+function checkPassword(){
+  const pass = document.getElementById('password').value.trim();
+  const error = document.getElementById('error');
 
-const menuBtn=document.getElementById('menuBtn');
-const drawer=document.getElementById('drawer');
-const musicBtn=document.getElementById('music');
-const musicState=document.getElementById('musicState');
+  if(pass === 'thegrave1888'){
+    document.getElementById('loginScreen').style.display = 'none';
+    localStorage.setItem('thegrave_unlocked','1');
+  }else{
+    error.textContent = 'La pietra rimane silenziosa...';
+  }
+}
 
-menuBtn.addEventListener('click',()=>{
-drawer.classList.toggle('open');
+if(localStorage.getItem('thegrave_unlocked') === '1'){
+  document.getElementById('loginScreen').style.display = 'none';
+}
+
+const menuBtn = document.getElementById('menuBtn');
+const drawer = document.getElementById('drawer');
+const musicBtn = document.getElementById('music');
+const musicState = document.getElementById('musicState');
+
+menuBtn.addEventListener('click', () => {
+  drawer.classList.toggle('open');
 });
 
-musicBtn.addEventListener('click',()=>{
-const on=musicState.textContent.includes('ON');
-musicState.textContent=on ? 'Musica OFF' : 'Musica ON';
+musicBtn.addEventListener('click', () => {
+  const on = musicState.textContent.includes('ON');
+  musicState.textContent = on ? 'Musica OFF' : 'Musica ON';
 });
-
 </script>
 
 </body>
