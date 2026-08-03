@@ -9,40 +9,13 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:100%;height:100%}
 body{background:#050403;overflow:hidden;font-family:Georgia,serif;color:#f2ddb0}
+#stage{position:fixed;inset:0;overflow:hidden;background:#050403}
+#art{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center center;display:block}
+#overlay{position:absolute;inset:0}
+.hotspot{position:absolute;display:block;background:transparent;border:0;outline:none;cursor:pointer;text-decoration:none}
 
-#stage{
-position:fixed;
-inset:0;
-overflow:hidden;
-background:#050403;
-}
-
-#art{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:contain;
-object-position:center;
-display:block;
-}
-
-#overlay{
-position:absolute;
-inset:0;
-}
-
-.hotspot{
-position:absolute;
-display:block;
-background:transparent;
-border:0;
-cursor:pointer;
-text-decoration:none;
-}
-
-#music{left:5.5%;top:7.2%;width:12%;height:9.2%;}
-#menuBtn{left:82%;top:7.1%;width:12.5%;height:9.4%;}
+#music{left:5.5%;top:7.2%;width:12%;height:9.2%}
+#menuBtn{left:82%;top:7.1%;width:12.5%;height:9.4%}
 
 /* PULSANTE INIZIA A LEGGERE */
 #enter{
@@ -50,15 +23,15 @@ left:30.5%;
 top:65.8%;
 width:39%;
 height:9.2%;
+z-index:100;
 }
 
-/* MENU INFERIORE */
-#personaggi{left:3%;top:83.4%;width:14%;height:11%;}
-#capitoli{left:19%;top:83.4%;width:14%;height:11%;}
-#storia{left:35%;top:83.4%;width:14%;height:11%;}
-#whitechapel{left:50.5%;top:83.4%;width:18%;height:11%;}
-#diario{left:69%;top:83.4%;width:13.5%;height:11%;}
-#rubinoLink{left:84.5%;top:83.4%;width:12.5%;height:11%;}
+#personaggi{left:3%;top:83.4%;width:14%;height:11%}
+#capitoli{left:19%;top:83.4%;width:14%;height:11%}
+#storia{left:35%;top:83.4%;width:14%;height:11%}
+#whitechapel{left:50.5%;top:83.4%;width:18%;height:11%}
+#diario{left:69%;top:83.4%;width:13.5%;height:11%}
+#rubinoLink{left:84.5%;top:83.4%;width:12.5%;height:11%}
 
 #drawer{
 position:absolute;
@@ -67,8 +40,10 @@ right:0;
 width:min(78vw,320px);
 height:100%;
 transform:translateX(102%);
-transition:transform .3s ease;
-background:rgba(10,7,5,.95);
+transition:transform .28s ease;
+background:rgba(10,7,5,.94);
+box-shadow:-18px 0 40px rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
 padding:22px 18px;
 display:flex;
 flex-direction:column;
@@ -82,31 +57,43 @@ transform:translateX(0);
 
 .drawer-title{
 font-size:1.1rem;
-letter-spacing:.15em;
+letter-spacing:.14em;
+color:#f1dcad;
 text-transform:uppercase;
-color:#f2ddb0;
+margin-bottom:6px;
 }
 
 .drawer-link{
-text-decoration:none;
 color:#e7ca92;
-padding:12px;
+text-decoration:none;
+font-size:1.02rem;
+padding:12px 10px;
 border:1px solid rgba(255,221,160,.12);
-border-radius:10px;
+border-radius:12px;
+background:rgba(255,255,255,.02);
 }
 
 .drawer-link:hover{
-color:white;
+color:#fff;
+border-color:rgba(255,221,160,.3);
 }
 
 .music-state{
-padding:12px;
-border:1px solid rgba(255,221,160,.12);
-border-radius:10px;
 color:#e7ca92;
+font-size:1rem;
+padding:12px 10px;
+border:1px solid rgba(255,221,160,.12);
+border-radius:12px;
+background:rgba(255,255,255,.02);
 }
 
+@media (max-width:720px){
+#drawer{
+width:min(86vw,300px);
+}
+}
 </style>
+
 </head>
 
 <body>
@@ -117,36 +104,31 @@ color:#e7ca92;
 
 <div id="overlay">
 
-<button class="hotspot" id="music"></button>
+<button class="hotspot" id="music" aria-label="Musica"></button>
 
-<button class="hotspot" id="menuBtn"></button>
+<button class="hotspot" id="menuBtn" aria-label="Menu"></button>
 
-<!-- QUESTA È LA MODIFICA -->
-<a class="hotspot" id="enter" href="capitolo1.html"></a>
+<a class="hotspot" id="enter" href="capitolo1.html" aria-label="Entra nel Romanzo"></a>
 
-<a class="hotspot" id="personaggi" href="book.html"></a>
+<a class="hotspot" id="personaggi" href="book.html" aria-label="Personaggi"></a>
 
-<a class="hotspot" id="capitoli" href="capitoli.html"></a>
+<a class="hotspot" id="capitoli" href="capitoli.html" aria-label="Capitoli"></a>
 
-<a class="hotspot" id="storia" href="storia.html"></a>
+<a class="hotspot" id="storia" href="storia.html" aria-label="La Storia"></a>
 
-<a class="hotspot" id="whitechapel" href="whitechapel.html"></a>
+<a class="hotspot" id="whitechapel" href="whitechapel.html" aria-label="Whitechapel 1888"></a>
 
-<a class="hotspot" id="diario" href="diario.html"></a>
+<a class="hotspot" id="diario" href="diario.html" aria-label="Diario"></a>
 
-<a class="hotspot" id="rubinoLink" href="rubino.html"></a>
+<a class="hotspot" id="rubinoLink" href="rubino.html" aria-label="Il Rubino"></a>
 
-<aside id="drawer">
+<aside id="drawer" aria-label="Menu">
 
 <div class="drawer-title">THE GRAVE</div>
 
-<div class="music-state" id="musicState">
-Musica OFF
-</div>
+<div class="music-state" id="musicState">Musica OFF</div>
 
 <a class="drawer-link" href="capitolo1.html">📖 Inizia a leggere</a>
-
-<a class="drawer-link" href="book.html">Personaggi</a>
 
 <a class="drawer-link" href="capitoli.html">Capitoli</a>
 
@@ -166,22 +148,18 @@ Musica OFF
 
 <script>
 
-const menuBtn=document.getElementById("menuBtn");
-const drawer=document.getElementById("drawer");
+const menuBtn=document.getElementById('menuBtn');
+const drawer=document.getElementById('drawer');
+const musicBtn=document.getElementById('music');
+const musicState=document.getElementById('musicState');
 
-menuBtn.addEventListener("click",()=>{
-drawer.classList.toggle("open");
+menuBtn.addEventListener('click',()=>{
+drawer.classList.toggle('open');
 });
 
-const musicBtn=document.getElementById("music");
-const musicState=document.getElementById("musicState");
-
-musicBtn.addEventListener("click",()=>{
-
-const on=musicState.textContent.includes("ON");
-
-musicState.textContent=on ? "Musica OFF" : "Musica ON";
-
+musicBtn.addEventListener('click',()=>{
+const on=musicState.textContent.includes('ON');
+musicState.textContent=on ? 'Musica OFF' : 'Musica ON';
 });
 
 </script>
