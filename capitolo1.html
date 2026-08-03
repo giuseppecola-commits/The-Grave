@@ -3,26 +3,194 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Capitolo 1</title>
+<title>The Grave — Capitolo 1</title>
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;min-height:100%}
 body{
-margin:0;
-background:#111;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.34), rgba(0,0,0,.56)),
+    url("images/background.png") center center / cover no-repeat fixed;
+  color:#eddcb7;
+  font-family:Georgia, serif;
+  overflow-x:hidden;
 }
-img{
-width:90%;
-max-width:900px;
-display:block;
+.page{
+  max-width:1060px;
+  margin:0 auto;
+  padding:clamp(14px,2.5vw,34px);
+}
+.paper{
+  background:
+    linear-gradient(to bottom, rgba(26,19,13,.92), rgba(17,12,8,.88)),
+    radial-gradient(circle at top, rgba(255,255,255,.03), transparent 30%);
+  border:1px solid rgba(220,184,112,.24);
+  border-radius:22px;
+  box-shadow:0 0 42px rgba(0,0,0,.42);
+  padding:clamp(18px,3.8vw,44px);
+  backdrop-filter:blur(6px);
+}
+.heroimg{
+  width:100%;
+  display:block;
+  border-radius:16px;
+  margin:0 0 28px 0;
+  box-shadow:0 16px 40px rgba(0,0,0,.25);
+}
+.header{
+  text-align:center;
+  margin-bottom:30px;
+}
+.kicker{
+  font-size:.86rem;
+  letter-spacing:.24em;
+  color:#dcb875;
+  text-transform:uppercase;
+  margin-bottom:10px;
+}
+h1{
+  font-size:clamp(2rem,4.8vw,3.7rem);
+  color:#f2deb3;
+  line-height:1.05;
+}
+h2{
+  margin-top:12px;
+  font-size:clamp(1rem,2.1vw,1.35rem);
+  color:#cda966;
+  font-weight:400;
+}
+.divider{
+  width:min(72vw,560px);
+  height:1px;
+  margin:18px auto 0;
+  background:linear-gradient(90deg, transparent, rgba(214,160,78,.85), transparent);
+  box-shadow:0 0 10px rgba(214,160,78,.18);
+}
+.chapter{
+  max-width:760px;
+  margin:0 auto;
+  font-size:clamp(1.03rem,2vw,1.18rem);
+  line-height:1.86;
+  color:#f0e0bd;
+}
+.chapter p{
+  margin:0 0 1em 0;
+  text-align:justify;
+  text-justify:inter-word;
+  hyphens:auto;
+}
+.chapter p:first-child::first-letter{
+  float:left;
+  font-size:4.35em;
+  line-height:.78;
+  padding:.03em .12em 0 0;
+  color:#d7b36a;
+  text-shadow:0 0 16px rgba(0,0,0,.25);
+}
+.nav{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+.nav a{
+  text-decoration:none;
+  color:#f0ddb0;
+  border:1px solid rgba(220,184,112,.28);
+  background:rgba(255,255,255,.03);
+  padding:12px 18px;
+  border-radius:10px;
+  min-width:160px;
+  text-align:center;
+  transition:.22s ease;
+}
+.nav a:hover{
+  color:#fff;
+  border-color:rgba(220,184,112,.45);
+  transform:translateY(-1px);
+}
+.note{
+  margin-top:20px;
+  font-size:.95rem;
+  color:#c8b18b;
+  text-align:center;
+  opacity:.9;
+}
+@media (max-width:700px){
+  .page{padding:12px}
+  .paper{padding:14px 12px 22px;border-radius:18px}
+  .nav a{min-width:0;flex:1}
+  .chapter{font-size:1rem;line-height:1.8}
+  .chapter p:first-child::first-letter{font-size:3.5em}
 }
 </style>
 </head>
 <body>
-
-<img src="images/capitolo1-bigben.png">
-
+<div class="page">
+  <article class="paper">
+    <img class="heroimg" src="images/capitolo1-bigben.png" alt="Illustrazione Capitolo 1 — Big Ben">
+    <header class="header">
+      <div class="kicker">The Grave</div>
+      <h1>Capitolo 1</h1>
+      <h2>Ritorno a Londra</h2>
+      <div class="divider"></div>
+    </header>
+    <section class="chapter">
+      <p>Dormivo profondamente quando una voce metallica mi riportò alla realtà. Era il comandante dell&#x27;aereo che annunciava l&#x27;imminente arrivo a Londra. Ancora trenta minuti e sarei finalmente tornato nella città che tanto amavo.</p>
+      <p>Mi stiracchiai lentamente, cercando di sciogliere i muscoli irrigiditi dopo oltre due ore e mezza di volo. Voltai lo sguardo verso il finestrino, ma oltre il vetro c&#x27;era soltanto un infinito mare di nuvole.</p>
+      <p>La donna corpulenta seduta al mio fianco dormiva ancora. Nonostante il caldo dell&#x27;aereo, teneva addosso un pesante giubbotto invernale che emanava un pungente odore di sudore. I suoi capelli, unti e lucidi, le ricadevano sul viso. Distolsi lo sguardo. Mi chiesi come fosse possibile vivere in quel modo nel 2016. Pochi minuti dopo l&#x27;aereo iniziò la discesa. Le nuvole si aprirono lentamente e, sotto di me, apparve finalmente lei. Londra.</p>
+      <p>Per molti era soltanto una città. Per me era casa. Il luogo dove riuscivo a ritrovare me stesso, dove ogni volta avevo la sensazione di respirare davvero. Mancavo da lì da tre lunghissimi anni. Avevo bisogno di allontanarmi da tutto. Negli ultimi tempi la mia vita aveva preso una piega che non avrei mai immaginato. Avevo appena compiuto quarant&#x27;anni. Ero single, avevo pochi amici e, nonostante una famiglia che mi voleva bene, dentro di me mi sentivo terribilmente solo. Qualche mese prima avevo conosciuto una donna mentre lavoravo come massaggiatore in una palestra. Era stata lei a prenotare un trattamento. Entrammo nella sala massaggi, una piccola stanza in cemento armato che avevo cercato di rendere più accogliente con alcune candele profumate e una lampada a luce soffusa che cambiava colore. Quel giorno l&#x27;avevo impostata su una calda tonalità ambra. Si chiamava Alexandra. Avrà avuto poco più di quarant&#x27;anni. Capelli biondi naturali, occhi tra l&#x27;azzurro e il verde attraversati da piccole pagliuzze dorate. Era una bella donna, ma ciò che colpiva davvero era la tristezza che sembrava abitare il suo sguardo. Durante il massaggio iniziò a raccontarmi la sua storia. Il compagno con cui aveva condiviso gran parte della sua vita l&#x27;aveva lasciata da un giorno all&#x27;altro. Quel dolore l&#x27;aveva consumata lentamente. Aveva provato perfino a farsi aiutare da uno psicologo, ma la sofferenza continuava a divorarla. Poi, una mattina, il suo corpo aveva ceduto. Si era risvegliata in ospedale senza ricordare quasi nulla. I medici le spiegarono che una perforazione allo stomaco le aveva provocato una grave emorragia interna. Le dissero che era arrivata in ospedale appena in tempo. Per pochi minuti non ce l&#x27;avrebbe fatta. Al termine del massaggio avevo l&#x27;impressione di conoscere ormai tutta la sua vita. Mi ringraziò per averle alleviato non solo i dolori fisici, ma anche quelli dell&#x27;anima. Poi si alzò e se ne andò, senza voltarsi nemmeno una volta. Quella stessa sera, stanco dopo una lunga giornata di lavoro, mi diressi nel solito pub, nascosto in un quartiere poco raccomandabile dell&#x27;eterna Roma. Era un locale piccolo, interrato; forse, molti anni prima, era stato soltanto una vecchia cantina per il vino. Dalla saletta riservata ai fumatori proveniva un intenso odore di sigaretta che impregnava l&#x27;aria. Seduto da solo a un tavolo, sorseggiavo lentamente una birra mentre osservavo distrattamente le scale che conducevano all&#x27;ingresso. Fu allora che la vidi.Stava scendendo proprio in quel momento.Per un istante rimasi immobile. Era difficile credere che il destino avesse deciso di far incrociare di nuovo le nostre strade nello stesso giorno, in due luoghi completamente diversi della città.Anche lei si fermò a metà della scala. «Non posso crederci...» disse sorridendo. «Deve essere proprio destino che io e te ci ritroviamo nello stesso pub.»Non riuscii a fare altro che sorriderle.Prese una birra e si sedette accanto a me.Iniziammo a parlare di quanto fosse incredibile quella coincidenza. Poi il discorso tornò inevitabilmente sulla sua vita. Mi raccontò ancora delle sofferenze che aveva vissuto e dei momenti difficili che stava cercando di lasciarsi alle spalle. Io rimasi lì ad ascoltarla, cercando di darle i migliori consigli che fossi in grado di offrirle.Le ore passarono senza che ce ne accorgessimo.A un certo punto mi guardò negli occhi. «Posso abbracciarti?» Annuii senza esitazione.Si avvicinò lentamente e mi strinse a sé. Era un abbraccio sincero, di quelli che sembrano riuscire a ricomporre, anche solo per un istante, i pezzi di un&#x27;anima ferita. Rimase stretta a me qualche secondo più del necessario.Quando si allontanò, i nostri sguardi rimasero incatenati.Il tempo sembrò fermarsi.Nessuno dei due disse una parola.Fu lei ad accorciare per prima quella distanza.Le sue labbra sfiorarono le mie con una delicatezza che non avevo mai provato prima.Sentii il suo profumo avvolgermi, mentre il sapore dolce del suo gloss alla fragola rimaneva sulle mie labbra.Continuammo a guardarci negli occhi, come se tutto il resto del mondo fosse improvvisamente scomparso.Poi sorrise. «Sei la cosa più bella che mi sia capitata nelle ultime settimane.»Quelle parole mi attraversarono il cuore.Per un istante ebbi la sensazione che la vita mi stesse finalmente restituendo qualcosa di bello.Purtroppo non sapevo che quella felicità sarebbe durata davvero poco.L&#x27;orario, però, ci costrinse a salutarci. Fece qualche passo verso l&#x27;uscita, poi si fermò, si voltò e tornò indietro. «Posso prendere il tuo numero?»Le sorrisi.Presi il suo iPhone e digitai il mio numero.Conoscendo tutto quello che aveva passato, evitai volutamente di chiederle il suo. Quando si fosse sentita pronta, sarebbe stata lei a cercarmi. In fondo sapeva dove lavoravo e come rintracciarmi.Passarono i giorni.Poi le settimane.Ma di Alexandra non ebbi più alcuna notizia.La donna maleodorante seduta accanto a me si svegliò all&#x27;improvviso. Si spostò di un sedile e, con movimenti goffi, cercò di recuperare il bagaglio dalla cappelliera.Esitai qualche istante. Non sapevo se alzarmi subito o aspettare che si liberasse un po&#x27; di spazio tra i sedili. Una cosa, però, era certa: non vedevo l&#x27;ora di scendere da quell&#x27;aereo.Mi armai di pazienza, superai i primi sedili e recuperai il mio bagaglio a mano.Ormai tutti i passeggeri erano in fila, in attesa che le hostess autorizzassero lo sbarco. Lentamente mi avvicinai al portellone.Fu in quell&#x27;istante che la sentii.L&#x27;aria fresca e frizzante di Londra mi accarezzò il viso.Inspirai profondamente.Dio, quanto mi era mancata.Ogni volta che respiravo quell&#x27;aria avevo la sensazione di tornare davvero in vita. Era diversa da quella a cui ero abituato in Italia. Forse era soltanto perché ero profondamente innamorato di quella città. Oppure Londra custodiva davvero qualcosa di speciale, qualcosa che non ero mai riuscito a spiegare. Abbassai lo sguardo e mi ritrovai davanti la solita scaletta infernale. Ogni volta che dovevo scendere da un aereo avevo il timore di mettere un piede in fallo e rotolare giù da quei gradini. Scesi lentamente, uno scalino alla volta. Mi guardai intorno, poi alzai gli occhi verso il cielo. Era grigio, freddo eppure riusciva a riempirmi il cuore di emozioni.Ma cosa erano, ormai, le emozioni per me? Gli innumerevoli eventi che avevano segnato la mia vita avevano trasformato il mio cuore in pietra. Non sapevo più emozionarmi, né innamorarmi. Vivevo giorno dopo giorno come uno zombie, senza una meta, trascinandomi in un &#x27; esistenza che sembrava aver perso ogni significato. L&#x27; unica certezza era Londra. La chiamavo il mio paradiso. Era quello il vero motivo del viaggio: ricaricare l &#x27; anima, allontanarmi da tutto e da tutti per ritrovare finalmente me stesso.</p>
+      <p>Era lì, in quella città immensa, dove milioni di persone correvano senza sosta come formiche operaie nel caos di una metropoli che non dormiva mai, che riuscivo a sentirmi davvero vivo. Solo lì ritrovavo un equilibrio tra il cuore e la mente. Accesi il cellulare per controllare se avessi ricevuto qualche messaggio. Brian aveva un carattere allegro e solare, ma allo stesso tempo era un lupo solitario. Gli piaceva stare da solo, aveva pochi amici e la maggior parte di loro era ormai sposata e con figli. Quando usciva in loro compagnia gli sembrava di appartenere a un altro mondo. I loro discorsi ruotavano sempre attorno all &#x27; educazione dei bambini, alle visite dal pediatra, alle malattie stagionali e a tutte quelle preoccupazioni che, in fondo, lui non riusciva a comprendere.</p>
+      <p>Poi c &#x27; era suo fratello Alex, più giovane di tredici anni. Nonostante la differenza d &#x27;età, era già sposato e aveva un figlio. Lui e Brian erano l &#x27; uno l &#x27; opposto dell &#x27; altro: come il sole e la luna, l &#x27; estate e l &#x27; inverno, il bianco e il nero. Eppure andavano d &#x27; accordo. Brian, da fratello maggiore, tendeva spesso a dispensare consigli, non per imporsi, ma per incoraggiare il carattere più riservato di Alex. Suo fratello gli aveva fatto il regalo più bello che potesse ricevere: un nipote.Thomas.</p>
+      <p>Un bambino biondo, vivace, con due occhi pieni di curiosità che riuscivano a illuminargli la giornata. Ogni volta che lo sentiva chiamarlo «zio», il cuore gli si riempiva di gioia. Era proprio Thomas la persona di cui sentiva maggiormente la mancanza ogni volta che partiva. Ma allora … dov &#x27; era davvero casa? Era una domanda che si poneva spesso.</p>
+      <p>Per quanto assurdo potesse sembrare, casa per lui era Londra. Non aveva mai capito fino in fondo il motivo, ma ogni volta che metteva piede in quella città provava una sensazione di appartenenza che non riusciva a spiegare. Adesso era di nuovo lì. Dopo tre anni passati a sognarla quasi ogni notte, finalmente non si trattava più di un sogno. Ogni risveglio, in quei lunghi tre anni, era stato un piccolo dolore, il ricordo amaro di un luogo che gli mancava profondamente. Ora, invece, seduto su quel taxi, era consapevole che tutto fosse reale. Era tornato alla vita. Mancavano ormai pochi minuti all &#x27; arrivo al terminal dei taxi quando dall &#x27; autoradio iniziarono a diffondersi le note di una canzone di Robbie Williams. I Love My Life. Il tassista, con il suo buffo cappello, iniziò a canticchiarla sottovoce. Sorrisi.</p>
+      <p>Che strana coincidenza. Una canzone che parlava di quanto fosse bella la vita proprio nel momento in cui stavo tornando nel luogo che più amavo al mondo. Forse era solo un caso. Oppure era il destino che mi stava dando il bentornato. In fondo, in quell &#x27; istante, la mia vita mi sembrava davvero bellissima.</p>
+      <p>Il taxi si fermò. Consegnai la carta al tassista per il pagamento. Lui mi sorrise ancora una volta. Ricambiai il sorriso, infilai giacca, guanti e sciarpa e scesi. L&#x27; aria era fredda. Del resto era il trenta ottobre. Il cielo, come sempre, era coperto da una coltre grigia. Avevo viaggiato per oltre tre ore, ma non avevo alcuna intenzione di rinchiudermi subito nella metropolitana. Non avevo nemmeno bagagli: avevo deciso che avrei comprato tutto direttamente a Londra.</p>
+      <p>Avevo quasi dimenticato quanta vita scorresse lungo quelle strade. Decisi così di concedermi una lunga passeggiata. Era il modo migliore per godermi il primo giorno in città e, allo stesso tempo, per riscaldarmi. Imboccai Buckingham Palace Road. Sulla sinistra riconobbi Grosvenor Gardens, quel piccolo angolo di verde dove, anni prima, mi ero sdraiato sull &#x27; erba aspettando l &#x27; ora di ripartire per l &#x27; Italia. Camminai a lungo, immerso nei miei pensieri. Quando arrivai davanti a Buckingham Palace provai una strana sensazione. Lui era ancora lì, immutabile, esattamente come lo ricordavo. Mi avvicinai all &#x27; imponente Victoria Memorial, dominato dall &#x27; enorme statua dorata che brillava anche sotto quel cielo grigio. Pensai a quanto dovesse essere stata amata la regina Vittoria per aver regnato così a lungo e aver lasciato un segno tanto profondo nella storia del suo Paese. Come facevo sempre, entrai a St. James &#x27;s Park. Per me era uno dei parchi più belli di Londra.</p>
+      <p>All &#x27; ingresso un maestoso salice piangente sfiorava con i suoi rami la superficie dell &#x27; acqua. Lungo i vialetti, molte persone facevano colazione sedute sulle panchine di legno, mentre piccioni e scoiattoli aspettavano pazientemente che qualche briciola cadesse a terra.</p>
+      <p>Era impossibile non restare colpiti dalla cura di quel luogo. Ogni aiuola sembrava disegnata con precisione, ogni fiore era al proprio posto. I cigni scivolavano eleganti sul laghetto come se si esibissero in uno spettacolo preparato apposta per i visitatori.</p>
+      <p>Verso la parte finale del parco, nascosto tra il verde, si apriva un piccolo lago con una fontana al centro. L &#x27; acqua zampillava verso il cielo con una grazia tale da far sembrare che, da un momento all &#x27; altro, potesse emergere una dea dalle sue profondità.Il parco stava ormai per finire. Avevo camminato a lungo, eppure non ero minimamente stanco. Sapevo che da lì a poco avrei raggiunto il mio posto preferito.</p>
+      <p>Davanti a me si apriva Horse Guards Road. Oltre gli edifici storici si intravedeva in lontananza il London Eye. L &#x27; ampio piazzale che avevo davanti agli occhi lo ricordavo spesso animato dai cavalli della Guardia Reale, bianchi e neri, che sfilavano fieri accompagnati dai loro cavalieri.</p>
+      <p>Cominciavo ad avvertire il freddo. Il sole, nascosto dietro uno spesso strato di nuvole, sembrava incapace di riscaldare la città. D&#x27; istinto avvicinai le mani al viso e ci soffiai sopra nel tentativo di scaldarle. Una pioggerellina sottile iniziò a cadere, ma non mi importava. Continuai a camminare, facendo attenzione ai continui taxi che sfrecciavano lungo la strada. La maggior parte erano i classici taxi neri londinesi, altri invece erano ricoperti da pubblicità di film, musical e spettacoli in scena nei teatri della città. Svoltai in Great George Street. Ancora poche centinaia di metri. Alla mia destra apparve l &#x27; Abbazia di Westminster, ma il mio sguardo era catturato soltanto da lui. Il Big Ben. Mi fermai. Inspirai profondamente. Un brivido mi percorse la schiena. Non sapevo dire se fosse colpa del freddo o dell &#x27; emozione. Forse entrambe le cose. Accelerai il passo fino alla stazione della metropolitana di Westminster. La maestosa torre dell &#x27; orologio dominava il cielo sopra di me. Rimasi per qualche istante immobile a contemplarla, proprio come un bambino davanti al regalo che aspetta da una vita. Entrai nella piccola caffetteria accanto alla stazione e ordinai una cioccolata calda da asporto. Il primo sorso fu una carezza.</p>
+      <p>Il calore scese lentamente lungo la gola fino allo stomaco, scaldandomi tutto il corpo. Era dolce, intensa e incredibilmente buona. O forse ero semplicemente felice di essere tornato lì. Con il bicchiere ancora caldo tra le mani ripresi a camminare. Attraversai Westminster Bridge. Quando raggiunsi la fine del ponte scesi la scalinata sulla destra. Ed eccolo.Il mio posto.</p>
+      <p>Mi appoggiai al basso muretto di pietra che costeggiava il Tamigi. Il fiume scorreva lento sotto di me, mentre davanti ai miei occhi il Big Ben si ergeva maestoso contro il cielo grigio.</p>
+      <p>In quell &#x27; istante le campane iniziarono a suonare. Sobbalzai. Erano le due del pomeriggio. Chiusi gli occhi.</p>
+      <p>Quanto mi era mancato quel suono.</p>
+      <p>Per anni l &#x27; avevo sentito soltanto nei miei ricordi. Nei sogni cercavo continuamente di raggiungere quel luogo, ma succedeva sempre qualcosa che me lo impediva. Era come se il mio subconscio volesse ricordarmi che stavo soltanto sognando. Quella volta, invece, era tutto vero. Ero davvero lì. Il vento freddo mi sferzava il viso, la pioggia cadeva sempre più fitta e i gabbiani volteggiavano sopra il Tamigi. Sul ponte alle mie spalle autobus rossi, taxi e centinaia di persone continuavano a scorrere senza fermarsi. Solo un suonatore di cornamusa, avvolto nel suo kilt scozzese, riusciva ogni tanto a rallentare quella frenesia. Alcuni turisti si fermavano ad ascoltarlo, altri scattavano fotografie o si facevano un selfie con il Big Ben alle spalle. Io no. Io quel panorama lo conoscevo già. E proprio per questo volevo assaporarne ogni singolo istante. Il tempo, lì, sembrava sempre correre più veloce.</p>
+      <p>Diedi un ultimo sguardo al Tamigi e decisi che era arrivato il momento di raggiungere l &#x27; ostello che avevo prenotato. Il Walrus Bar &amp; Hostel.</p>
+      <p>Tre anni prima avevo soggiornato proprio lì e avevo deciso di tornarci. L &#x27; unico difetto di quel posto era la ferrovia che passava accanto all &#x27; edificio, ma ormai faceva parte dei suoi ricordi. Spinsi la pesante porta di legno con la grande vetrata centrale.</p>
+      <p>Una piccola campanella tintinnò annunciando il mio ingresso. Mi guardai intorno. Nulla era cambiato.</p>
+      <p>Alla mia destra c &#x27; era ancora il piccolo bagno. Poco più avanti il lungo bancone in legno di noce dominava il pub. Divani e sedie erano tutti diversi tra loro, come se fossero stati recuperati uno alla volta nei mercatini dell &#x27; usato. Sopra le grandi vetrate spiccavano lampade in vetro decorato color azzurro elettrico, dallo stile tipicamente primo Novecento. Alcuni divani erano rivestiti di velluto viola, altri sembravano addirittura i sedili posteriori di vecchi mezzi di trasporto. In fondo alla sala campeggiava, enorme, la bandiera del Regno Unito. Durante il giorno quel pub si trasformava nella sala per la colazione degli ospiti dell &#x27; ostello. La sera, invece, tornava a essere uno dei locali più caratteristici della zona. Mentre continuavo a osservare ogni dettaglio, un ragazzo sbucò da dietro il bancone. «Come posso aiutarla?» Lo osservai con attenzione.</p>
+      <p>Portava i capelli lunghi fino alle spalle, ordinati da una riga laterale e del colore del cioccolato fondente. Aveva occhi azzurri, una barba folta color rame e un sorriso piccolo ma sincero. Non era particolarmente alto, eppure trasmetteva immediatamente un senso di cordialità e accoglienza.Lo guardai e gli sorrisi. «Buongiorno. Ho prenotato un posto letto.»</p>
+      <p>Gli consegnai il foglio della prenotazione che avevo stampato prima di partire. Lo prese, si spostò davanti al computer e iniziò a digitare sulla tastiera. Dopo qualche istante alzò lo sguardo.</p>
+      <p>«Signor Brian …» disse con un perfetto accento italiano. «Sa che anch &#x27; io vengo da Roma? Cosa la porta in questa città così frenetica?» Sorrisi.</p>
+      <p>«Dammi pure del tu. Sono passati tre anni dall &#x27; ultima volta che sono stato qui. Avevo bisogno di tornare. Di stare un po &#x27; da solo … e di ritrovare me stesso.»</p>
+      <p>Il ragazzo annuì, poi si guardò intorno con aria incuriosita. «Posso farti una domanda?» «Certo.» «Dov &#x27;è il tuo bagaglio?» Lo fissai per un istante, divertito. «Ti sembrerà strano, ma questa volta ho deciso di partire senza niente. Comprerò tutto qui. Non volevo portarmi dietro nulla dell &#x27; Italia.» Lui sorrise. «Allora immagino che avessi davvero voglia di scappare.» Non risposi. In fondo aveva ragione.</p>
+      <p>Mentre terminava la registrazione mi indicò il bancone. «Nel frattempo posso offrirti qualcosa da bere?» Sentivo ancora il freddo della passeggiata nelle ossa. «Volentieri. Un whisky.» Non avevo mai bevuto whisky in vita mia. Il ragazzo prese una bottiglia, appoggiò davanti a me un bicchiere basso e vi versò lentamente quel liquido color ambra. Lo avvicinai al viso. L&#x27; aroma era intenso, pungente. Ne bevvi un piccolo sorso. Il liquore mi incendiò la gola, scese nello stomaco come una fiammata e per un attimo rimasi senza fiato.</p>
+      <p>Accennai un sorriso. Era decisamente più forte di quanto immaginassi. Eppure, sorso dopo sorso, iniziai ad apprezzarne il sapore. Sentivo il calore diffondersi lentamente in tutto il corpo.</p>
+      <p>Mi resi conto, però, di essere completamente a digiuno. Continuando così, avrei rischiato di ubriacarmi in fretta. Il ragazzo tornò con i documenti. «Mi servono soltanto due firme.»</p>
+      <p>Firmai i moduli. Poi mi consegnò la tessera magnetica della stanza. Lo ringraziai e infilai tutto nella tasca della giacca. La mia giornata, però, era appena cominciata.</p>
+      <p>C&#x27; era un luogo che desideravo rivedere più di ogni altro. Da anni ero affascinato dalla storia di Jack lo Squartatore. Avevo visitato praticamente ogni angolo di Whitechapel legato ai suoi delitti. Molti di quei luoghi erano cambiati, altri erano scomparsi. Uno, invece, era rimasto quasi identico. Il Ten Bells.</p>
+      <p>Si diceva che due delle cinque vittime canoniche di Jack frequentassero proprio quel pub.</p>
+      <p>Ogni volta che venivo a Londra finivo sempre lì, seduto davanti a un boccale di birra, immaginando la Whitechapel vittoriana e chiedendomi quante storie fossero passate tra quelle mura.</p>
+      <p>Indossai la giacca, infilai guanti e sciarpa e sollevai il cappuccio. Il whisky mi aveva riscaldato il corpo, ma fuori il freddo era pungente. Salutai il ragazzo. Aprii la porta. La campanella sopra l &#x27; ingresso tintinnò ancora una volta. Una folata di vento gelido mi investì in pieno volto. Sorrisi.</p>
+      <p>Era esattamente il clima che avevo desiderato per tre lunghissimi anni. Feci pochi passi e alzai la mano.</p>
+      <p>Un taxi si fermò accanto a me.</p>
+      <p>«Ottantaquattro Commercial Street, per favore.» L&#x27; autista annuì e partì. Il viaggio sarebbe durato una ventina di minuti. Estrassi l &#x27; iPhone, collegai gli auricolari e avviai la riproduzione casuale. Le prime note riempirono immediatamente l &#x27; abitacolo. White Light. George Michael. Le prime parole della canzone mi fecero sorridere. “ I&#x27;m back… I&#x27;m back… prouder than ever…”</p>
+      <p>Che strana coincidenza.</p>
+      <p>Avevo sempre avuto l &#x27; impressione che alcune canzoni arrivassero al momento giusto, come se qualcuno volesse lasciarmi un messaggio. Forse era soltanto fantasia. O forse era il mio modo di cercare un significato in ogni cosa. Restai in silenzio a osservare Londra dal finestrino. Ogni strada. Ogni edificio. Ogni volto.</p>
+      <p>Nessuno aveva mai capito davvero il motivo per cui amassi così tanto quella città. E, forse, nemmeno io riuscivo a spiegarlo. Dopo una decina di minuti attraversammo il Tower Bridge. Da lì lo skyline di Londra appariva magnifico. Le nuvole basse coloravano ogni cosa di sfumature grigie. Persino le persone che camminavano lungo il ponte sembravano far parte di un vecchio film in bianco e nero. Poco più avanti comparve lo Shard. Rimasi a fissarlo.</p>
+      <p>Negli anni lo avevo visto crescere piano piano, fino a diventare quella gigantesca lama di vetro che sembrava tagliare il cielo. Lui era cresciuto verso l &#x27; alto. Io, invece, ero cresciuto dentro.</p>
+      <p>Tra delusioni, errori e ferite. Scacciai quel pensiero. Non ero tornato a Londra per fare i conti con il passato.</p>
+      <p>Ero lì per ricominciare.</p>
+    </section>
+    <div class="nav">
+      <a href="index.html">← Home</a>
+      <a href="book.html">Indice / Libro</a>
+    </div>
+    <div class="note">Prossimo capitolo: presto online</div>
+  </article>
+</div>
 </body>
 </html>
